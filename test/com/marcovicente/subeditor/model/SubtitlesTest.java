@@ -1,4 +1,4 @@
-package com.marcovicente.subeditor.test;
+package com.marcovicente.subeditor.model;
 
 
 import com.marcovicente.subeditor.exception.SubtitleWritingException;
