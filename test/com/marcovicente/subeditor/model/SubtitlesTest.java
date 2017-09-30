@@ -23,7 +23,7 @@ public class SubtitlesTest {
 
     @Test
     public void loadFromFileAndPrintOnSystemOut(){
-        String filename = "./src/com/marcovicente/subeditor/resources/test.srt";
+        String filename = "./resources/test.srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
 
@@ -33,7 +33,7 @@ public class SubtitlesTest {
 
     @Test
     public void loadFromFileAndSaveToNewFile() throws SubtitleWritingException {
-        String srcFilename = "./src/com/marcovicente/subeditor/resources/test.srt";
+        String srcFilename = "./resources/test.srt";
         String destFilename = "./out/test.srt";
 
         Subtitles subtitles = Subtitles.fromFile(srcFilename);
@@ -53,7 +53,7 @@ public class SubtitlesTest {
 
     @Test
     public void loadFromFileAndAddTime(){
-        String filename = "./src/com/marcovicente/subeditor/resources/test.srt";
+        String filename = "./resources/test.srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
 
@@ -70,7 +70,7 @@ public class SubtitlesTest {
 
     @Test
     public void loadFromFileAndSubtractTime(){
-        String filename = "./src/com/marcovicente/subeditor/resources/test.srt";
+        String filename = "./resources/test.srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
 

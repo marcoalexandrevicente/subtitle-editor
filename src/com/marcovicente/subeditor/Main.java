@@ -6,7 +6,7 @@ import com.marcovicente.subeditor.model.Subtitles;
 public class Main {
 
     public static void main(String[] args) throws SubtitleWritingException {
-        String filename = "./src/com/marcovicente/subeditor/resources/test.srt";
+        String filename = "./resources/test.srt";
         String destFilename = "./out/main.srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
