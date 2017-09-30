@@ -1,6 +1,6 @@
 # subtitle-editor
 
-Lightweight and easy to use subtitles editor (only supports .srt for now):
+Lightweight and easy to use subtitles editor library (only supports .srt for now):
 
 ```java
         // subtitle file
