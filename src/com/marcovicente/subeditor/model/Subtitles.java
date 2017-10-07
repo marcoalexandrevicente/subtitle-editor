@@ -1,5 +1,6 @@
 package com.marcovicente.subeditor.model;
 
+import com.marcovicente.subeditor.exception.SubtitleReadingException;
 import com.marcovicente.subeditor.exception.SubtitleWritingException;
 import com.marcovicente.subeditor.io.SubtitlesReader;
 import com.marcovicente.subeditor.io.SubtitlesWriter;
@@ -21,7 +22,7 @@ public class Subtitles {
         this.subtitles = subtitles;
     }
 
-    public static Subtitles fromFile(String filename){
+    public static Subtitles fromFile(String filename) throws SubtitleReadingException {
 
         SubtitlesReader reader = new SubtitlesReader(filename);
         return reader.read();

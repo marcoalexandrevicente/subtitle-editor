@@ -1,6 +1,7 @@
 package com.marcovicente.subeditor.model;
 
 
+import com.marcovicente.subeditor.exception.SubtitleReadingException;
 import com.marcovicente.subeditor.exception.SubtitleWritingException;
 import com.marcovicente.subeditor.model.Subtitle;
 import com.marcovicente.subeditor.model.Subtitles;
@@ -22,7 +23,7 @@ public class SubtitlesTest {
     }
 
     @Test
-    public void loadFromFileAndPrintOnSystemOut(){
+    public void loadFromFileAndPrintOnSystemOut() throws SubtitleReadingException {
         String filename = "./resources/test.srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
@@ -32,7 +33,7 @@ public class SubtitlesTest {
     }
 
     @Test
-    public void loadFromFileAndSaveToNewFile() throws SubtitleWritingException {
+    public void loadFromFileAndSaveToNewFile() throws SubtitleWritingException, SubtitleReadingException {
         String srcFilename = "./resources/test.srt";
         String destFilename = "./out/test.srt";
 
@@ -52,7 +53,7 @@ public class SubtitlesTest {
     }
 
     @Test
-    public void loadFromFileAndAddTime(){
+    public void loadFromFileAndAddTime() throws SubtitleReadingException {
         String filename = "./resources/test.srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
@@ -69,7 +70,7 @@ public class SubtitlesTest {
     }
 
     @Test
-    public void loadFromFileAndSubtractTime(){
+    public void loadFromFileAndSubtractTime() throws SubtitleReadingException {
         String filename = "./resources/test.srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
