@@ -39,6 +39,12 @@ public class Subtitles {
         }
     }
 
+    public void setRelativeSpeed(double speed){
+        for(Subtitle subtitle : subtitles){
+            subtitle.setRelativeSpeed(speed);
+        }
+    }
+
     public void add(Date time){
         for(Subtitle subtitle : subtitles){
             subtitle.add(time);

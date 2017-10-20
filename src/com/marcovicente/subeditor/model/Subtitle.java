@@ -53,12 +53,22 @@ public class Subtitle {
         change(time, addToStart, false);
     }
 
-    private void change(Date time, boolean addToStart, boolean add){
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(time);
+    public void setRelativeSpeed(double speed){
+        long startTime = start.getTime();
+        long endTime = end.getTime();
 
-        Calendar toChange = (Calendar) calendar.clone();
-        toChange.setTime(addToStart?start:end);
+        startTime *= speed;
+        endTime *=speed;
+
+        start.setTime(startTime);
+        end.setTime(endTime);
+    }
+
+    private void change(Date time, boolean addToStart, boolean add){
+
+        Calendar calendar = Util.getCalendar(time);
+
+        Calendar toChange = Util.getCalendar(addToStart?start:end);
 
         int[] fieldsToChange = new int[]{Calendar.HOUR, Calendar.MINUTE, Calendar.SECOND, Calendar.MILLISECOND};
 

@@ -5,6 +5,7 @@ import com.marcovicente.subeditor.exception.SubtitleReadingException;
 import com.marcovicente.subeditor.exception.SubtitleWritingException;
 import com.marcovicente.subeditor.model.Subtitle;
 import com.marcovicente.subeditor.model.Subtitles;
+import com.marcovicente.subeditor.util.Util;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -88,8 +89,7 @@ public class SubtitlesTest {
 
     private void checkDate(Date time, int hours, int minutes, int seconds, int milliseconds){
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(time);
+        Calendar calendar = Util.getCalendar(time);
 
         int hh = calendar.get(Calendar.HOUR);
         int mm = calendar.get(Calendar.MINUTE);
