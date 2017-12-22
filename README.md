@@ -19,7 +19,7 @@ Lightweight and easy to use subtitles editor library (only supports .srt for now
         // so you can slow them down...
         subtitles.setRelativeSpeed(1.1)
 
-        // or rush them a bit
+        // or speed them up
         subtitles.setRelativeSpeed(0.9)
 
         // save file
