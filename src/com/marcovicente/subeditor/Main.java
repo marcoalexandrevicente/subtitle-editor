@@ -12,13 +12,24 @@ public class Main {
 
         // filename ="/Users/marcovicente/Downloads/Fargo Season 3 Complete 720p.HDTV.x264.[FREDDY1714]/Fargo.S03E02.720p.HDTV.x264.[FREDDY1714].org.srt";
 
+        String dir = "/Users/marcovicente/Downloads/Modern.Family.S10E02.720p.HDTV.x264-AVS[rarbg]/";
+
+        dir+= "";
+
+        String fname = "Modern.Family.S10E02.720p.HDTV.x264-AVS";
+
+        filename = dir + fname + ".ori.srt";
+
+        destFilename = dir + fname + ".srt";
+
         // destFilename = "/Users/marcovicente/Downloads/Fargo Season 3 Complete 720p.HDTV.x264.[FREDDY1714]/Fargo.S03E02.720p.HDTV.x264.[FREDDY1714].srt";
 
         Subtitles subtitles = Subtitles.fromFile(filename);
 
-        subtitles.add("00:00:18,500");
+        //subtitles.add("00:00:07,000");
+        subtitles.add("00:00:11,000");
 
-        // subtitles.setRelativeSpeed(1.007);
+        //subtitles.setRelativeSpeed(1.025);
 
         subtitles.toFile(destFilename);
 

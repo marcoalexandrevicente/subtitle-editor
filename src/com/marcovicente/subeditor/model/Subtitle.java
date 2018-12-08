@@ -68,7 +68,9 @@ public class Subtitle {
 
         Calendar calendar = Util.getCalendar(time);
 
-        Calendar toChange = Util.getCalendar(addToStart?start:end);
+        Calendar original = Util.getCalendar(addToStart?start:end);
+
+        Calendar toChange = (Calendar) original.clone();
 
         int[] fieldsToChange = new int[]{Calendar.HOUR, Calendar.MINUTE, Calendar.SECOND, Calendar.MILLISECOND};
 
@@ -76,6 +78,11 @@ public class Subtitle {
 
         for(int field : fieldsToChange){
             toChange.add(field, calendar.get(field)*factor);
+        }
+
+        // don't allow negative times....
+        if(toChange.getTime().getTime() < 0){
+            toChange.setTime(new Date(0));
         }
 
         if(addToStart){

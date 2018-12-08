@@ -7,6 +7,7 @@ import com.marcovicente.subeditor.util.Util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -29,7 +30,7 @@ public class SubtitlesReader {
 
         List<Subtitle> subtitles = new ArrayList<>();
 
-        try (BufferedReader br = Files.newBufferedReader(Paths.get(filename))) {
+        try (BufferedReader br = Files.newBufferedReader(Paths.get(filename), Charset.forName("ISO-8859-1"))) {
 
             List<String> lines = br.lines().collect(Collectors.toList());
 
